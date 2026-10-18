@@ -1,0 +1,4 @@
+execute if score @s oly_lineage matches 3 if score @s oly_rank matches 1 if entity @s[advancements={olympus:hades/offering=true}] run function olympus:rank/hades_2
+execute if score @s oly_lineage matches 3 if score @s oly_rank matches 2 if entity @s[advancements={olympus:hades/offering=true,olympus:hades/journey=true}] run function olympus:rank/hades_3
+execute if score @s oly_lineage matches 3 if score @s oly_rank matches 3 if entity @s[advancements={olympus:hades/offering=true,olympus:hades/journey=true,olympus:hades/victory=true}] run function olympus:rank/hades_4
+execute if score @s oly_lineage matches 3 if score @s oly_rank matches 4 if entity @s[advancements={olympus:hades/offering=true,olympus:hades/journey=true,olympus:hades/victory=true,olympus:hades/ascension=true}] run function olympus:rank/hades_5

@@ -1,0 +1,4 @@
+execute if score @s oly_lineage matches 1 if score @s oly_rank matches 1 if entity @s[advancements={olympus:zeus/offering=true}] run function olympus:rank/zeus_2
+execute if score @s oly_lineage matches 1 if score @s oly_rank matches 2 if entity @s[advancements={olympus:zeus/offering=true,olympus:zeus/journey=true}] run function olympus:rank/zeus_3
+execute if score @s oly_lineage matches 1 if score @s oly_rank matches 3 if entity @s[advancements={olympus:zeus/offering=true,olympus:zeus/journey=true,olympus:zeus/victory=true}] run function olympus:rank/zeus_4
+execute if score @s oly_lineage matches 1 if score @s oly_rank matches 4 if entity @s[advancements={olympus:zeus/offering=true,olympus:zeus/journey=true,olympus:zeus/victory=true,olympus:zeus/ascension=true}] run function olympus:rank/zeus_5

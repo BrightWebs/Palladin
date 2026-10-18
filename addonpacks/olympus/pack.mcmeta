@@ -1,0 +1,14 @@
+{
+  "pack": {
+    "id": "olympus",
+    "description": "Olympus | Greek divine lineages | 0.1.0 alpha",
+    "pack_format": 15,
+    "version": "0.1.0"
+  },
+  "dependencies": {
+    "common": {
+      "minecraft": "[1.20.1,1.20.2)",
+      "palladium": "[4.5.9,5.0.0)"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "parent": "olympus:root",
+  "display": {
+    "icon": {
+      "item": "minecraft:soul_lantern"
+    },
+    "title": "Hades: Offering",
+    "description": "Obtain minecraft:diamond after claiming.",
+    "frame": "task",
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "complete": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"olympus_hades\"]}"
+            }
+          }
+        ],
+        "items": [
+          {
+            "items": [
+              "minecraft:diamond"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "olympus:progress/hades"
+  }
+}

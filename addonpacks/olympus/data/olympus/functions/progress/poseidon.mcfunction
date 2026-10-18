@@ -1,0 +1,4 @@
+execute if score @s oly_lineage matches 2 if score @s oly_rank matches 1 if entity @s[advancements={olympus:poseidon/offering=true}] run function olympus:rank/poseidon_2
+execute if score @s oly_lineage matches 2 if score @s oly_rank matches 2 if entity @s[advancements={olympus:poseidon/offering=true,olympus:poseidon/journey=true}] run function olympus:rank/poseidon_3
+execute if score @s oly_lineage matches 2 if score @s oly_rank matches 3 if entity @s[advancements={olympus:poseidon/offering=true,olympus:poseidon/journey=true,olympus:poseidon/victory=true}] run function olympus:rank/poseidon_4
+execute if score @s oly_lineage matches 2 if score @s oly_rank matches 4 if entity @s[advancements={olympus:poseidon/offering=true,olympus:poseidon/journey=true,olympus:poseidon/victory=true,olympus:poseidon/ascension=true}] run function olympus:rank/poseidon_5

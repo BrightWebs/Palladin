@@ -1,0 +1,17 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:nether_star"
+    },
+    "title": "Olympus",
+    "description": "Discover your divine lineage. /trigger oly_guide",
+    "background": "minecraft:textures/block/quartz_block_side.png",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "claimed": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

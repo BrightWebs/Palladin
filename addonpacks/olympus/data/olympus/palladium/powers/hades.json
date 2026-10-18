@@ -1,0 +1,232 @@
+{
+  "name": "Olympus \u2022 Child of Hades",
+  "icon": "minecraft:soul_lantern",
+  "background": "minecraft:textures/block/quartz_block_side.png",
+  "gui_display_type": "tree",
+  "energy_bars": {
+    "ichor": {
+      "max": 100,
+      "auto_increase_per_tick": 2,
+      "auto_increase_interval": 20,
+      "color": "#ae91e5"
+    }
+  },
+  "abilities": {
+    "birthright": {
+      "type": "palladium:command",
+      "title": "Underworld Sight",
+      "description": "Inherited gift of Hades. Free passive.",
+      "icon": "minecraft:soul_lantern",
+      "gui_position": [
+        0,
+        0
+      ],
+      "commands": [
+        "effect give @s minecraft:night_vision 12 0 true"
+      ],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "oly_rank",
+            "min_score": 1
+          }
+        ]
+      }
+    },
+    "strike": {
+      "type": "palladium:command",
+      "title": "Soul Lance",
+      "description": "Hostile-only aimed strike, 24 blocks. Stops at solid blocks. 10 Ichor; 2s cooldown.",
+      "icon": "minecraft:soul_lantern",
+      "gui_position": [
+        -60,
+        55
+      ],
+      "commands": [
+        "function olympus:combat/hades/cast"
+      ],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "oly_rank",
+            "min_score": 1
+          }
+        ],
+        "enabling": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "ichor",
+            "min": 10
+          },
+          {
+            "type": "palladium:action",
+            "cooldown": 40,
+            "key_type": "key_bind"
+          }
+        ]
+      },
+      "energy_bar_usage": {
+        "energy_bar": "ichor",
+        "amount": 10
+      }
+    },
+    "movement": {
+      "type": "palladium:command",
+      "title": "Shade Step",
+      "description": "Movement blessing. 15 Ichor; 12s cooldown.",
+      "icon": "minecraft:soul_lantern",
+      "gui_position": [
+        60,
+        55
+      ],
+      "commands": [
+        "effect give @s minecraft:speed 5 1 true",
+        "effect give @s minecraft:invisibility 5 0 true"
+      ],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "oly_rank",
+            "min_score": 2
+          }
+        ],
+        "enabling": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "ichor",
+            "min": 15
+          },
+          {
+            "type": "palladium:action",
+            "cooldown": 240,
+            "key_type": "key_bind"
+          }
+        ]
+      },
+      "energy_bar_usage": {
+        "energy_bar": "ichor",
+        "amount": 15
+      }
+    },
+    "guard": {
+      "type": "palladium:command",
+      "title": "Grave Mantle",
+      "description": "Resistance I for 6 seconds. 20 Ichor; 18s cooldown.",
+      "icon": "minecraft:soul_lantern",
+      "gui_position": [
+        -60,
+        110
+      ],
+      "commands": [
+        "effect give @s minecraft:resistance 6 0 true"
+      ],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "oly_rank",
+            "min_score": 3
+          }
+        ],
+        "enabling": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "ichor",
+            "min": 20
+          },
+          {
+            "type": "palladium:action",
+            "cooldown": 360,
+            "key_type": "key_bind"
+          }
+        ]
+      },
+      "energy_bar_usage": {
+        "energy_bar": "ichor",
+        "amount": 20
+      }
+    },
+    "ultimate": {
+      "type": "palladium:command",
+      "title": "Underworld Reckoning",
+      "description": "Empowered aimed strike: 12 damage. 60 Ichor; 40s cooldown.",
+      "icon": "minecraft:soul_lantern",
+      "gui_position": [
+        60,
+        110
+      ],
+      "commands": [
+        "function olympus:combat/hades/ultimate"
+      ],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "oly_rank",
+            "min_score": 4
+          }
+        ],
+        "enabling": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "ichor",
+            "min": 60
+          },
+          {
+            "type": "palladium:action",
+            "cooldown": 800,
+            "key_type": "key_bind"
+          }
+        ]
+      },
+      "energy_bar_usage": {
+        "energy_bar": "ichor",
+        "amount": 60
+      }
+    },
+    "manifestation": {
+      "type": "palladium:command",
+      "title": "Divine Manifestation",
+      "description": "15 seconds of Strength I, Resistance I and Speed I. 75 Ichor; 90s cooldown.",
+      "icon": "minecraft:soul_lantern",
+      "gui_position": [
+        0,
+        170
+      ],
+      "commands": [
+        "effect give @s minecraft:strength 15 0 true",
+        "effect give @s minecraft:resistance 15 0 true",
+        "effect give @s minecraft:speed 15 0 true",
+        "particle minecraft:soul ~ ~1 ~ 0.7 0.8 0.7 0.04 60"
+      ],
+      "conditions": {
+        "unlocking": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "oly_rank",
+            "min_score": 5
+          }
+        ],
+        "enabling": [
+          {
+            "type": "palladium:energy_bar",
+            "energy_bar": "ichor",
+            "min": 75
+          },
+          {
+            "type": "palladium:action",
+            "cooldown": 1800,
+            "key_type": "key_bind"
+          }
+        ]
+      },
+      "energy_bar_usage": {
+        "energy_bar": "ichor",
+        "amount": 75
+      }
+    }
+  }
+}
